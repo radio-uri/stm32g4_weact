@@ -32,7 +32,11 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define LED_toggle HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_6)
+#define LED(x) HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6,x)
+#define ON 1
+#define OFF 
+#define BTN HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -96,9 +100,10 @@ int main(void)
   while (1)
   {
 
-    if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
-      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6,1);
-    else HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6,0);
+    if (BTN)
+      LED(1);
+    else LED(0);
+  
 
 
     /* USER CODE END WHILE */
