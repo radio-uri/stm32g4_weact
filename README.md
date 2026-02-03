@@ -2,12 +2,14 @@
 WeActStudio STM32G474CEU6 dev bord for various hobby projects
 
 Development board vendor repository: https://github.com/WeActStudio/WeActStudio.STM32G474CoreBoard
+Board schematics https://github.com/WeActStudio/WeActStudio.STM32G474CoreBoard/blob/master/Hardware/WeAct-STM32G474CoreBoard_L_V10_SchDoc.pdf
 
 USB CDC for board communication:
-USB setup generated in STM32CubeMX.
-USB_device/usb_cdc_if.c: defined RxData buffer variable.
-USB_device/usb_cdc_if.h: declared RxData extern variable.
-USB receve data copied in to RxData right in the callback function CDC_Receive_FS() (usb_cdc_if.c)
+  USB setup generated in STM32CubeMX.
+  USB_device/usb_cdc_if.c: defined RxData buffer variable.
+  USB_device/usb_cdc_if.h: declared RxData extern variable.
+  USB receve data copied in to RxData right in the callback function CDC_Receive_FS() (usb_cdc_if.c)
+
 
 USART1: 
     A10 - RX
