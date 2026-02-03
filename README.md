@@ -9,3 +9,6 @@ USB_device/usb_cdc_if.c: defined RxData buffer variable.
 USB_device/usb_cdc_if.h: declared RxData extern variable.
 USB receve data copied in to RxData right in the callback function CDC_Receive_FS() (usb_cdc_if.c)
 
+USART1: 
+    A10 - RX
+    A9 - TX
